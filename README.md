@@ -115,6 +115,8 @@ And the game is ready to use. Check out the warnings below if there are any issu
 
 <img src='images/4_follow.JPG' width=100%>
 
+- To exit Docker, use ctrl+d.
+
 - Try not to add too many Chaser's to the Environment. They will run into the target and be removed from the game. Add too many, and the game could crash. If this happens, press the ctrl key and c at the same time to exit. Worst case scenario, you might have to restart Docker. Here is the biggest amount of Chaser's I have tried
 
 <img src='images/Followers_Hold_Shift.JPG' width=100%>
