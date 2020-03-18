@@ -20,13 +20,12 @@ class ChaserController : public Process, public AgentInterface {
             goal_x = e.value()["x"];
             goal_y = e.value()["y"];
         });
-        watch("button_click", [this](Event e) { // Pause button used to pause the Chaser bots. Method copied into Target to prevent more agents to be added.
+        watch("button_click", [this](Event e) { // Pause button used to pause the Chaser bots. Method copied into Target to prevent more agents from being added.
            if(!pause) {
                 auto pos = position();
                 pause_x = pos.x;
                 pause_y = pos.y;
                 pause = true;
-                std::cout << "Paused! No more agents can be added. \n";
            } else {
                pause = false;
            }

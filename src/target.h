@@ -12,14 +12,12 @@ class TargetController : public Process, public AgentInterface {
 
     void init() {
         watch("screen_click", [this](Event e) {
-            teleport(e.value()["x"], e.value()["y"], 0);
-            emit(Event("goal_change", { 
-                { "x",e.value()["x"]}, 
-                { "y", e.value()["y"] } 
-            }));
-            std::cout << "Target Moved \n"; 
+            if(e.value()["x"] > -850 && e.value()["x"] < 850 && e.value()["y"] > -430 && e.value()["y"] < 430) {
+                teleport(e.value()["x"], e.value()["y"], 0); //Teleport Target to screen clicked location. Don't click out of the grey box. 
+                std::cout << "Target Moved \n"; 
+            }
         });
-        
+
         auto pos = position();
         x = pos.x;
         y = pos.y;
@@ -31,10 +29,12 @@ class TargetController : public Process, public AgentInterface {
         counter = 0;
         watch("button_click", [this](Event e) { // Pause button used to pause the Chaser bots. This ensures no more chasers can be added.
            if(!pause) {
-                pause = true;    
+                pause = true;
+                std::cout << "Paused! No more agents can be added. \n";    
            } else {
                pause = false;
            }
+           
         });
     }
 

@@ -96,7 +96,7 @@ Head to the local host tab, and you should see something like the following:
 
 <img src='images/Local_Host.JPG' width=100%>
 
-And the game is ready to use. 
+And the game is ready to use. Check out the warnings below if there are any issues. 
 
 **How to Use**
 ---
@@ -107,9 +107,14 @@ And the game is ready to use.
 
 **Click on Screen = Move Target**
 
-**Warnings**
+**Important**
 ---
-I work on a decent sized monitor, so you make have to zoom out to see the same screen as shown. 
-Try not to add too many Chaser's to the Environment. They will run into the target and be removed from the game. Add too many, and the game could crash. If this happens, press the ctrl key and c at the same time to exit. Worst case scenario, you might have to restart Docker. Here is the biggest amount of Chaser's I have tried
+- I work on a decent sized monitor, so you make have to zoom out to see the same screen as shown. the walls range from x = -880 to 880
+
+- Functionality is described in the src folder. Here is an image of a good working chain of 4 Chaser's. 
+
+<img src='images/4_follow.JPG' width=100%>
+
+- Try not to add too many Chaser's to the Environment. They will run into the target and be removed from the game. Add too many, and the game could crash. If this happens, press the ctrl key and c at the same time to exit. Worst case scenario, you might have to restart Docker. Here is the biggest amount of Chaser's I have tried
 
 <img src='images/Followers_Hold_Shift.JPG' width=100%>
