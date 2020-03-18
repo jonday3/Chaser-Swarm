@@ -61,7 +61,7 @@ To run this project, there will be a combination of repos to pull from. I will b
 docker run -p80:80 -p8765:8765 -v /c/your_path../"Source File":/source -it klavins/enviro:v1.6 bash
 ```
 
-"your_path" and "Source File" apply to your system. For example, my system uses my name "Jon Day", and needs these quotaion marks to properly execute the Unix command. "Source File" is your source file we created, and will have files in it after the clone line is executed. 
+"your_path" and "Source File" apply to your system. For example, my system uses my name "Jon Day", and needs these quotaion marks to properly execute the Unix command. "Source File" is your source directory we created, and will have files in it after the clone line is executed. 
 
 Other Debugging:
     - Make sure that docker is running.
@@ -94,5 +94,5 @@ root@XXXXXXXXe5:/source# enviro
 
 Head to the local host tab, and you should see something like the following:
 
-<img src='images/my_project_followers.JPG' width=70%>
+<img src='images/Local_Host.JPG' width=70%>
 
