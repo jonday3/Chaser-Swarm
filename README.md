@@ -5,7 +5,7 @@ Final Project - Software Engineering For Embedded Applications
 EE P 520A Winter 2020
 ---
 
-<img src='images/my_project_followers.JPG' width=70%>
+<img src='images/my_project_followers.JPG' width=50%>
 
 Introduction
 ---
@@ -94,5 +94,5 @@ root@XXXXXXXXe5:/source# enviro
 
 Head to the local host tab, and you should see something like the following:
 
-<img src='images/Local_Host.JPG' width=70%>
+<img src='images/Local_Host.JPG' width=100%>
 
