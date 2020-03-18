@@ -1,0 +1,30 @@
+{
+    "name": "Chaser",
+    "type": "dynamic",
+    "description": "Replace this string with a description",
+    "shape": "omni",
+    "radius": 8,
+    "friction": {
+      "collision": 50,
+      "linear": 60,
+      "rotational": 600
+    },
+    "sensors": [{ 
+      "type": "range",
+      "location": { "x": 0, "y": 0 },
+      "direction": 0
+      },
+      { 
+        "type": "range",
+        "location": { "x": 0, "y": 0 },
+        "direction": 0.4
+    },
+    { 
+        "type": "range",
+        "location": { "x": 0, "y": 0 },
+        "direction": -0.4
+    }
+  ],
+    "mass": 1,    
+    "controller": "lib/chaser.so"
+}

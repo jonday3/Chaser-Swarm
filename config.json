@@ -1,0 +1,75 @@
+{
+
+    "name": "Robot World - Chaser Swarm.                                       Press Shift to add a Chaser!",
+    "ip": "0.0.0.0",
+    "port": 8765,
+
+    "buttons": [
+        {
+            "name": "pause",
+            "label": "(Pause) - Click Screen to move Target",
+            "style": { "background": "white", "border-color": "black" }
+        }
+    ],
+
+    "agents": [
+        {
+            "definition": "defs/chaser.json",
+            "style": { "fill": "green", "stroke": "black" },
+            "position": {
+                "x": -100, 
+                "y": 100, 
+                "theta": 5
+            }
+        },
+        {
+            "definition": "defs/target.json",
+            "style": { "fill": "orange", "stroke": "black" },
+            "position": {
+                "x": -350, 
+                "y": -200, 
+                "theta": 0
+            }
+        }                         
+    ],
+
+    "statics": [
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": -880, "y": -440 },
+                { "x": -880,  "y": 430 },
+                { "x": -870,  "y": 430 },
+                { "x": -870, "y": -440 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": 880, "y": -440 },
+                { "x": 880,  "y": 430 },
+                { "x": 870,  "y": 430 },
+                { "x": 870, "y": -440 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": 880,  "y": 440 },
+                { "x": 880,  "y": 430 },
+                { "x": -880, "y": 430 },
+                { "x": -880, "y": 440 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": 880,  "y": -440 },
+                { "x": 880,  "y": -430 },
+                { "x": -870, "y": -430 },
+                { "x": -870, "y": -440 }
+            ]
+        }
+    ]
+
+}
