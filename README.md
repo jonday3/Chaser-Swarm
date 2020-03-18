@@ -96,3 +96,7 @@ Head to the local host tab, and you should see something like the following:
 
 <img src='images/Local_Host.JPG' width=100%>
 
+And the game is ready to use. 
+
+**How to Use**
+---
