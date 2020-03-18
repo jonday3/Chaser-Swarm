@@ -111,7 +111,7 @@ And the game is ready to use. Check out the warnings below if there are any issu
 ---
 - The walls range from x = -880 to 880 and y = -440 to 440, you may have to zoom out. 
 
-- Functionality is described in the src folder. Here is an image of a good working chain of 4 Chaser's. 
+- Functionality is described in the src folder. The followers take a moment to stabilize into following the Target path. Here is an image of a good working chain of 4 Chaser's. 
 
 <img src='images/4_follow.JPG' width=100%>
 
