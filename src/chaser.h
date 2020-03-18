@@ -7,7 +7,6 @@ using namespace enviro;
 
 /*! Chaser Controller Class
 * This class is the main class used to control the behavior of the Chaser Agent 
-* All implementations are in this header file. No .cc used.
 */
 class ChaserController : public Process, public AgentInterface {
 
@@ -16,6 +15,7 @@ class ChaserController : public Process, public AgentInterface {
 
     void init() {
         set_client_id("chaser"); // Set string ID used for interaction with other agents.
+
         watch("tracker", [this](Event e) { // Event emitted from the Target Agent to find the location in the World to move to.
             goal_x = e.value()["x"];
             goal_y = e.value()["y"];
@@ -37,11 +37,11 @@ class ChaserController : public Process, public AgentInterface {
         if(pause) {
             move_toward(pause_x, pause_y, 10, 0);
         } else {
-            if((sensor_value(0) < 15 || sensor_value(1) < 15 || sensor_value(2) < 15) || 
+            if((sensor_value(0) < 15 || sensor_value(1) < 15 || sensor_value(2) < 15) || // If the Sensor value is low enough, move back. Chasers should move closer together. 
             ((sensor_reflection_type(0) != "Chaser" && sensor_reflection_type(1) != "Chaser" && sensor_reflection_type(2) != "Chaser") &&
              (sensor_value(0) < 20 || sensor_value(1) < 20 || sensor_value(2) < 20))) {
-                track_velocity(40*cos(goal_x-angle()) - 80*angular_velocity(),30*cos(goal_y-angle()) - 80*angular_velocity());
-            } else {
+                track_velocity(40*cos(goal_x-angle()) - 80*angular_velocity(),30*cos(goal_y-angle()) - 80*angular_velocity()); //Change values to change sinusoidal movement of Chasers
+            } else { // Sensor values is not low, move towards Target
                 move_toward(goal_x, goal_y, 500, 300);
             }
             notice_collisions_with("Target", [this](Event &e) {

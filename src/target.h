@@ -5,15 +5,19 @@
 
 using namespace enviro;
 
+/*! Target Controller Class
+* This class is the main class used to control the behavior of the Target Agent 
+* The Target moves in a square inside the grey box. If there is something in front of the Target, it also rotates away. 
+*/
 class TargetController : public Process, public AgentInterface {
 
     public:
     TargetController() : Process(), AgentInterface() {}
 
     void init() {
-        watch("screen_click", [this](Event e) {
+        watch("screen_click", [this](Event e) { //Teleport Target to screen clicked location. Don't click out of the grey box.
             if(e.value()["x"] > -850 && e.value()["x"] < 850 && e.value()["y"] > -430 && e.value()["y"] < 430) {
-                teleport(e.value()["x"], e.value()["y"], 0); //Teleport Target to screen clicked location. Don't click out of the grey box. 
+                teleport(e.value()["x"], e.value()["y"], 0);  
                 std::cout << "Target Moved \n"; 
             }
         });
@@ -21,10 +25,11 @@ class TargetController : public Process, public AgentInterface {
         auto pos = position();
         x = pos.x;
         y = pos.y;
-        emit(Event("j", { 
+        emit(Event("tracker", { 
                 { "x", x }, 
                 { "y", y} 
-            }));
+        }));
+
         desired_heading = 0;
         counter = 0;
         watch("button_click", [this](Event e) { // Pause button used to pause the Chaser bots. This ensures no more chasers can be added.
@@ -44,7 +49,7 @@ class TargetController : public Process, public AgentInterface {
         if(sensor_value(0) < 70 ) {
             if((sensor_value(0) < 70)) {
                 if(counter == 0) {
-                    desired_heading += M_PI / 2;
+                    desired_heading += M_PI / 2; // Square path. Starts out pointing towards pi and rotates when the Target sensor is low. 
                     track_velocity(10, 300); 
                     counter++;
                 } else {
@@ -64,7 +69,7 @@ class TargetController : public Process, public AgentInterface {
         auto pos = position();
         x = pos.x;
         y = pos.y;
-        emit(Event("tracker", { 
+        emit(Event("tracker", { // Emits position for Chaser to follow. 
                 { "x", x }, 
                 { "y", y} 
         }));
@@ -72,7 +77,7 @@ class TargetController : public Process, public AgentInterface {
             if(!keydown && !pause) {
                 if(e.value()["shiftKey"]){
                     if(agent_count < 1) {
-                        Agent& v = add_agent("Chaser", 0, 0, 0, {{"fill", "blue"},{"stroke", "black"}});
+                        Agent& v = add_agent("Chaser", 0, 0, 0, {{"fill", "blue"},{"stroke", "black"}}); //Creates 1 Chaser when keydown event occurs
                         emit(Event("newagent")); 
                         agent_count++;
                     }
