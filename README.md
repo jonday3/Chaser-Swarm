@@ -5,6 +5,8 @@ Final Project - Software Engineering For Embedded Applications
 EE P 520A Winter 2020
 ---
 
+<img src='https://raw.githubusercontent.com/jonday3/Tracker-Swarm/images/my_project_followers.png' width=70%>
+
 Introduction
 ---
 This Github repo has been created for the University of Washington Software Engineering For Embedded Applications class (EE P 520A).  In this repo, I will explain how to run this project on your system, what the fucntionality is, and how this project can be expanded upon. 
