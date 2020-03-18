@@ -101,7 +101,7 @@ And the game is ready to use.
 **How to Use**
 ---
 
-**Shift = Add Chaser**
+**Press Shift = Add Chaser**
 
 **Click on (Pause) = Pause Chasers**
 
@@ -109,4 +109,7 @@ And the game is ready to use.
 
 **Warnings**
 ---
-Try not to add too many Chaser's to the Environment. 
+I work on a decent sized monitor, so you make have to zoom out to see the same screen as shown. 
+Try not to add too many Chaser's to the Environment. They will run into the target and be removed from the game. Add too many, and the game could crash. If this happens, press the ctrl key and c at the same time to exit. Worst case scenario, you might have to restart Docker. Here is the biggest amount of Chaser's I have tried
+
+<img src='images/Followers_Hold_Shift.JPG' width=100%>
