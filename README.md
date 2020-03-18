@@ -9,7 +9,7 @@ EE P 520A Winter 2020
 
 Introduction
 ---
-This Github repo has been created for the University of Washington Software Engineering For Embedded Applications class (EE P 520A).  In this repo, I will explain how to run this project on your system, what the funtionality is, and how this project can be expanded upon. 
+This Github repo has been created for the University of Washington Software Engineering For Embedded Applications class (EE P 520A).  In this repo I will explain how to run this project on your system and how it functions. 
 
 Installation/Setup
 ---
@@ -48,7 +48,7 @@ mkdir "Source File"
 You can create this file using whatever name you want, just keep it consistent. `cd` into this directory using the terminal line, and then clone this repo into that directory. To clone this repo into that source file using the terminal command line:
 
 ```bash
-git clone https://github.com/jonday3/Tracker-Swarm
+git clone https://github.com/jonday3/Chaser-Swarm
 ```
 
 There now should be files within your newly created "Source File" directory. 
@@ -100,3 +100,13 @@ And the game is ready to use.
 
 **How to Use**
 ---
+
+**Shift = Add Chaser**
+
+**Click on (Pause) = Pause Chasers**
+
+**Click on Screen = Move Target**
+
+**Warnings**
+---
+Try not to add too many Chaser's to the Environment. 
