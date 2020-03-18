@@ -109,7 +109,7 @@ And the game is ready to use. Check out the warnings below if there are any issu
 
 **Important**
 ---
-- I work on a decent sized monitor, so you make have to zoom out to see the same screen as shown. the walls range from x = -880 to 880
+- The walls range from x = -880 to 880 and y = -440 to 440, you may have to zoom out. 
 
 - Functionality is described in the src folder. Here is an image of a good working chain of 4 Chaser's. 
 
