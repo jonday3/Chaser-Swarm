@@ -5,7 +5,7 @@ Final Project - Software Engineering For Embedded Applications
 EE P 520A Winter 2020
 ---
 
-<img src='images/my_project_followers.png' width=70%>
+<img src='https://raw.githubusercontent.com/jonday3/Tracker-Swarm/images/my_project_followers.JPG' width=70%>
 
 Introduction
 ---
