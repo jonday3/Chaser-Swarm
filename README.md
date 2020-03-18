@@ -51,7 +51,7 @@ You can create this file using whatever name you want, just keep it consistent. 
 git clone https://github.com/jonday3/Chaser-Swarm
 ```
 
-There now should be files within your newly created "Source File" directory. 
+There now should be files within your newly created "Source File" directory. You will have a new folder in this file called "Chaser-Swarm". 
 
 Running the Code
 ---
@@ -76,6 +76,10 @@ root@XXXXXXXXe5:/source#
 ```
 
 After you see this, you are now using the docker image in professor klavins enviro source code. Let's start the system, and then dive into the underlying code. To start this project, use the terminal and run:
+
+```bash
+root@XXXXXXXXe5:/source# cd ".../Source File/Chaser-Swarm"
+```
 
 ```bash
 root@39167803b0e5:/source# esm start
